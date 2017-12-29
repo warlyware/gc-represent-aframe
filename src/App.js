@@ -7,7 +7,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 
-console.log(GeoData);
 class App extends Component {
   render() {
     return (
@@ -15,16 +14,20 @@ class App extends Component {
         <a-assets>
           <a-asset-item id="json-lakes-50m" src={GeoJSONData} />
         </a-assets>
+        <Entity position={{
+              x: 10, y: 10, z: 0
+            }}
+          light={{type: 'point'}}
+        />
         <Entity
-         camera={{
-           active: true,
-           position:{
-            x: 0, y: 0, z: 0
-           }
+          camera={{
+            active: true,
+            position: {
+              x: 0, y: 0, z: 0
+            }
           }}
         />
         <Entity
-          rotate='-1'
           scale='2 2 2'
           geojson={{
             src: '#json-lakes-50m',
@@ -43,7 +46,21 @@ class App extends Component {
             color: 'red'
           }}
           position={{
-            x: 0, y: 0, z: -5}}/>
+            x: 0, y: 0, z: -5
+          }} />
+        <Entity
+          scale='2 2 2'
+          geometry={{
+            primitive: 'sphere',
+            radius: 1
+          }}
+          material={{
+            color: 'black'
+          }}
+          position={{
+            x: 0, y: 0, z: -5
+          }}
+        />
       </Scene>
     );
   }
