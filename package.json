@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-geojson-component": "^1.2.0",
     "aframe-particle-system-component": "^1.0.11",
     "aframe-react": "^4.3.0",
+    "aframe-react-assets": "^2.0.5",
+    "json-loader": "^0.5.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
